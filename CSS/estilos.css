@@ -1,0 +1,446 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+#grilla{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 3% 77% 5%;
+    grid-template-areas: 
+                        "header"
+                        "nav"
+                        "main"
+                        "footer";
+
+    height: 1500px;
+}
+
+header{
+    grid-area: header;
+    background-image: url("../Assets/imagenes/plc-background-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+nav{
+    grid-area: nav;    
+}
+
+main{
+    grid-area: main;
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(49, 43, 99);
+    color: white;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+a{
+    color: rgb(236, 199, 236);
+}
+
+li a:hover{
+    border-bottom: 2px solid white;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+video{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#headerFlexible{
+    display: flex;
+    flex-direction: row;
+}
+
+.formatoSubtitulo{
+    /*text-align: left;*/
+    margin:0;
+    color: white;
+    text-decoration: underline;
+}
+
+.tituloTexto{
+    color:rgb(243, 199, 181);
+    text-decoration: underline;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.subtitulos{
+    color: white;
+    text-decoration: underline;
+    font-size: 30px;
+    
+}
+
+p{
+    color: white;
+    text-indent: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+    /*background-color: rgb(37, 37, 146);*/
+
+    background-image: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,21,121,1) 30%, rgba(0,212,255,1) 100%);
+    height: 100%;
+    
+}
+
+#tituloPagina{
+    font-size: 30px;
+    text-align: center;
+
+    position: relative;
+    left: 8%;
+    top: 10%;
+}
+
+fieldset{
+    width: 50%;
+}
+
+#recuadro{
+    display: grid;
+    grid-template-columns: 20% 40%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-areas:
+                        "nombre recuadro1"
+                        "apellido recuadro2"
+                        "telefono recuadro3"
+                        "email recuadro4";
+    justify-items: left;
+    align-content: space-between;
+    height: 150px;
+}
+
+#campoNombre{
+    grid-area: nombre;
+}
+
+#cuadroNombre{
+    grid-area: recuadro1;
+}
+
+#campoApellido{
+    grid-area: apellido;
+}
+
+#cuadroApellido{
+    grid-area: recuadro2;
+}
+
+#campoTelefono{
+    grid-area: telefono;
+}
+
+#cuadroTelefono{
+    grid-area: recuadro3;
+}
+
+#campoEmail{
+    grid-area: email;
+}
+
+#cuadroEmail{
+    grid-area: recuadro4;
+}
+
+legend{
+    color: white;
+    font-size: 22px;
+}
+
+#formatoCamposFormulario{
+    color: white;
+    font-size: 20px;
+}
+
+#contenedorComentario{
+    display: flex;
+    flex-direction: row;
+}
+
+#contenedorBotones{
+    display: flex;
+    justify-content: space-around;
+}
+
+#grillaFotos{
+    display: grid;
+    grid-template-rows: 6% 80%;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-areas:
+                        "titulo titulo titulo"
+                        "Foto1 Foto2 Foto3";
+    grid-column-gap: 5%;
+    /*height: 50%;*/
+    justify-items: center;
+    align-content: space-between;
+    
+}
+
+#tituloFoto{
+    grid-area: titulo;
+
+}
+
+#fotoUno{
+    grid-area: Foto1;
+}
+
+#fotoDos{
+    grid-area: Foto2;
+}
+
+#fotoTres{
+    grid-area: Foto3;
+}
+
+
+#grillaVideos{
+    display: grid;
+    grid-template-rows: 6% 70%;
+    /*grid-template-columns: 45% 10% 45%;*/
+    grid-template-areas:
+                        "titulo titulo titulo"
+                        "Video1 . Video2";
+    
+    height: 50%;
+    justify-items: center;
+}
+
+#tituloVideo{
+    grid-area: titulo;
+}
+
+#videoUno{
+    grid-area: Video1;
+}
+
+#videoDos{
+    grid-area: Video2;
+}
+
+#pantallaInicial{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#fondoSectionInicio{
+    background-color:coral;
+    transition: background-color 4s;
+}
+
+#fondoSectionInicio:hover{
+    background-color:blue;
+}
+
+#imagenSection{
+    height: 400px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  
+/***************************** Media Query *********************************/
+@media only screen and (max-width:768px){
+
+    #grilla{
+        grid-template-columns: 100%;
+        /*grid-template-rows: 15% 10% 70% 5%;*/
+        grid-template-rows: 15% 3% 77% 5%;
+        grid-template-areas: 
+                            "header"
+                            "nav"
+                            "main"
+                            "footer";
+       
+    }
+
+    li{
+        font-size: 16px;
+    }
+
+    #tituloPagina{
+        font-size: 20px;
+        text-align: center;
+
+        position: relative;
+        top: 30%;
+    }
+
+    #recuadro{
+        grid-template-columns: 22% 30%;
+
+    }
+
+    #grillaFotos{
+        grid-template-rows: 5% 40% 40%;
+        grid-template-columns: 40% 40%;
+        grid-template-areas:
+                            "titulo titulo"
+                            "Foto1 Foto2"
+                            "Foto3 Foto4";
+        grid-row-gap: 1%;
+    }
+
+    #grillaVideos{
+        /*grid-template-rows: 2% 60%;*/
+        grid-template-rows: 1% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+                            "titulo titulo"
+                            "Video1 Video2";
+        grid-column-gap:2%;
+        /*grid-row-gap: 10%;*/
+
+    }
+
+    #headerFlexible{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo{
+        width: 40%;
+    }
+
+}
+
+
+
+@media only screen and (max-width:480px){
+
+    #grilla{
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 10% 70% 5%;
+        grid-template-areas: 
+                            "header"
+                            "nav"
+                            "main"
+                            "footer";
+       
+    }
+    
+    #menu{
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        justify-items: left;
+
+        height: 100%;
+    }
+     
+    /*#tituloPagina{
+        font-size: 15px;
+        text-align: center;
+    }
+    */
+
+    #tituloPagina{
+        font-size: 0.7rem;
+        text-align: center;
+        top: 0%;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    li{
+        font-size: 15px;
+    }
+
+    fieldset{
+        width: 25%;
+    }
+
+    #recuadro{
+        grid-template-columns: 22% 30%;
+
+    }
+
+    #grillaFotos{
+        grid-template-rows: 10% 30% 30% 30%;
+        grid-template-columns: 60%;
+        grid-template-areas:
+                            "titulo"
+                            "Foto1"
+                            "Foto2"
+                            "Foto3";
+        
+    }
+
+    #grillaVideos{
+        grid-template-rows: 10% 5% 40% 40%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+                            "."
+                            "titulo"
+                            "Video1"
+                            "Video2";
+        
+
+    }
+
+    #headerFlexible{
+        display: flex;
+        flex-direction: column;
+        background-image: url("imagenes/plc-background-2.jpg");
+    }
+
+    #logo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagenSection{
+        height: 400px;
+    }
+
+}
+
+
